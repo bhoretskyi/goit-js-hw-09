@@ -9,6 +9,7 @@ const refs = {
   start: document.querySelector('[data-start]'),
 };
 refs.start.disabled = true;
+let timerId = null
 
 const options = {
   enableTime: true,
