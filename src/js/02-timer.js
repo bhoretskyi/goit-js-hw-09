@@ -56,11 +56,13 @@ refs.start.addEventListener('click', () => {
     let clock = new Date(refs.inputDate.value) - new Date();
 
     let normalClock = convertMs(clock);
-    console.dir(normalClock);
-
-    refs.days.textContent = addLeadingZero(normalClock.days);
-    refs.hours.textContent = addLeadingZero(normalClock.hours);
-    refs.minutes.textContent = addLeadingZero(normalClock.minutes);
-    refs.seconds.textContent = addLeadingZero(normalClock.seconds);
+    
+if(clock > 0){
+  refs.days.textContent = addLeadingZero(normalClock.days);
+  refs.hours.textContent = addLeadingZero(normalClock.hours);
+  refs.minutes.textContent = addLeadingZero(normalClock.minutes);
+  refs.seconds.textContent = addLeadingZero(normalClock.seconds);
+}
+   
   }, 1000);
 });
