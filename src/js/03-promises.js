@@ -23,7 +23,7 @@ function createPromise(position, delay) {
   })
   return promise
   
-}
+} 
 refs.button.addEventListener('click', e =>{
   e.preventDefault()
   let delay = Number(refs.delay.value);
