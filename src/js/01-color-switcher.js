@@ -10,10 +10,14 @@ const startButton = document.querySelector('[data-start]');
 const stopButton = document.querySelector('[data-stop]');
 startButton.addEventListener('click', onStartClick);
 stopButton.addEventListener('click', onStopClick);
+let timerID = null;
+ 
 function onStartClick() {
-  timerID = setInterval(() => {
+   timerID = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
   }, 1000);
+  
+  
   startButton.disabled = true;
 }
 function onStopClick() {
